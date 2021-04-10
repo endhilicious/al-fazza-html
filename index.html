@@ -38,11 +38,23 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+<style>
+  .goods {
+    background-color: #ff9800!important;
+    padding: 10px;
+    color: white !important;
+  }
+  #warning-alert {
+    background-color: red!important;
+    padding: 2px ;
+    color: white !important;
+  }
+</style>
 
 <body>
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
+  <section id="hero" style="background-repeat: round;">
     <div class="hero-container">
       <a data-aos="fade-up" href="#about" class="btn-get-started scrollto">Lihat</a>
     </div>
@@ -439,11 +451,11 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Contact</h2>
+          <h2>Simulasi</h2>
           <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga eum quidem</p>
         </div>
 
-        <div class="row">
+        <div class="row" style="margin-bottom: 3rem;">
 
           <div class="col-lg-4">
             <div class="info d-flex flex-column" data-aos="fade-right">
@@ -455,26 +467,29 @@
                 
                 <div class="range-slider">
                   <h4 class="great" style="padding: 0 !important">Uang Muka (DP)</h4>
-                  <input name="dp"class="range-slider__range" type="range" value="250" min="0" max="500" step="50">
-                  <span class="range-slider__values">0</span>
+                  <input name="dp"class="range-slider__range" type="range" value="0" min="0" max="15000000" step="10000">
+                  <div class="range-slider__values" id="dp-rupiah">0</div>
                 </div>
                 
                 <div class="range-slider">
                   <h4 class="great" style="padding: 0 !important">Tenor</h4>
-                  <input name="tenor"class="range-slider__range" type="range" value="400" min="0" max="500">
-                  <span class="range-slider__values">0</span>
+                  <input name="tenor"class="range-slider__range" type="range" value="1" min="1" max="10">
+                  <span class="range-slider__values" id="tenor-bulan">0</span> bulan
                 </div> 
-                
-                <div class="price-slider" id="total-layout-responsive">
-                  <h4 class="great" style="padding: 0 !important">angsuran</h4>
-                  <h4 class="goods" id="angsuran-responsive"></h4>
-                  <br>
-                  <h4 class="great" style="padding: 0 !important">Total</h4>
-                  <h4 class="goods" id="total-responsive"></h4>
+                <hr />
+                <div>
+                  * Hasil Simulasi Akan Berubah-ubah setiap saat
                 </div>
-              <div>
-                Hasil Simulasi Akan Berubah-ubah setiap saat
-              </div>
+                <div id="warning-alert" style="display: none;">
+                  <span>DP(Uang Muka) tidak boleh lebih besar dari Harga Barang</span>
+                </div>
+                
+                <div class="price-slider" id="total-layout-responsive" style="display: none;">
+                  <h4 class="great" style="padding: 0 !important">Harga Barang</h4>
+                  <h4 class="goods" id="total-responsive" style="padding: 1rem!important;"></h4>
+                  <h4 class="great" style="padding: 0 !important">angsuran/bulan</h4>
+                  <h4 class="goods" id="angsuran-responsive" style="padding: 1rem!important;"></h4>
+                </div>
             </div>
 
           </div>
@@ -588,24 +603,23 @@
                 const tau_alfazza = document.getElementById('tau_alfazza').value;
                 const alasan_kredit = document.getElementById('alasan_kredit').value;
 
-                console.log('name', name);
-                console.log('usia', usia);
-                console.log('pekerjaan', pekerjaan);
-                console.log('penghasilan', penghasilan);
-                console.log('no_hp', no_hp);
-                console.log('nama_perusahaan', nama_perusahaan);
-                console.log('alamat_rumah', alamat_rumah);
-                console.log('alamat_perusahaan', alamat_perusahaan);
-                console.log('rencana_barang', rencana_barang);
-                console.log('merk_barang', merk_barang);
-                console.log('tau_alfazza', tau_alfazza);
-                console.log('alasan_kredit', alasan_kredit);
+                // console.log('name', name);
+                // console.log('usia', usia);
+                // console.log('pekerjaan', pekerjaan);
+                // console.log('penghasilan', penghasilan);
+                // console.log('no_hp', no_hp);
+                // console.log('nama_perusahaan', nama_perusahaan);
+                // console.log('alamat_rumah', alamat_rumah);
+                // console.log('alamat_perusahaan', alamat_perusahaan);
+                // console.log('rencana_barang', rencana_barang);
+                // console.log('merk_barang', merk_barang);
+                // console.log('tau_alfazza', tau_alfazza);
+                // console.log('alasan_kredit', alasan_kredit);
 
                 var data = `
                   https://wa.me/6289659782116?text=Permisi%20Saya%20Ingin%20melakukan%20Pengajuan%20Kredit%20di%20Alfazza.%20Berikut%20Data%20saya%0A1.%20Nama%20lengkap%20%3A%20${name}%0A%0A2.%20Alamat%20lengkap%20%3A%20${alamat_rumah}%20%0A%0A3.%20Umur%20%3A%20${usia}%20%0A%0A4.%20Pekerjaan%20%3A%20${pekerjaan}%0A%0A5.%20Penghasilan%20%3A%20${penghasilan}%20%0A%0A6.%20Nama%20perusahaan%20tempat%20bekerja%3A%20${nama_perusahaan}%20%0A%0A7.%20Alamat%20perusahaan%20tempat%20bekerja%3A%20${alamat_perusahaan}%20%0A%0A8.%20No%20hp%3A%20${no_hp}%20%0A%0A9.%20Apakah%20ada%20kredit%20di%20tempat%20lain%3F${pernah_kredit}%0A%0A10.%20Rencana%20barang%20yang%20akan%20di%20kredit%3A%20${rencana_barang}%20%0A%0A11.%20Merek%20dan%20type%20apa%3A%20${merk_barang}%20%0A%0A12.%20Tau%20Alfazza%20dari%20mana.%3F%20%3A%20${tau_alfazza}%0A%0A13.%20Alasan%20mau%20megajukan%20kredit%20di%20alfazza.%3F%20%3A%20${alasan_kredit}
                 `;
                 window.open(data,"_blank");
-                
               }
               
             </script>
@@ -670,39 +684,65 @@
   <script src="assets/js/main.js"></script>
   <!-- <script src="assets/js/custom-slider.js"></script> -->
   <script>
+    var dp = 0, harga = 0, tenor = 0;
     var rangeSlider = function(){
     var slider = $('.range-slider'),
         range = $('.range-slider__range'),
         value = $('.range-slider__values');
       
-    slider.each(function(e){
-      console.log('e', e);
-      value.each(function(){
+    slider.each(() => {
+      value.each(() => {
         var value = $(this).prev().attr('value');
         var name = $(this).prev().attr('name');
-        console.log('name', name);
-        if (name == 'harga') {
-          console.log('haha')
+        if (name == 'harga' || name == 'dp') {
           $(this).html(rupiah(value));
         } else {
-          console.log('hihi')
           $(this).html(value);
         }
       });
 
       range.on('input', function(e){
-        console.log('e', e);
-        
         if (e.originalEvent.srcElement.name == 'harga') {
-          console.log('haha range', e.originalEvent.srcElement.name)
-          $(' #harga-rupiah ').html(rupiah(this.value));
-        } else {
-          console.log('hihi range', e.originalEvent.srcElement.name)
-          $(this).next(value).html(this.value);
+          harga = this.value;
+          $(' #harga-rupiah ').html(rupiah(harga));
+          kalkulasi(harga, dp, tenor);
+          cekhargadp(harga, dp);
+        }
+        if (e.originalEvent.srcElement.name == 'dp') {
+          dp = this.value;
+          $(' #dp-rupiah ').html(rupiah(dp));
+          kalkulasi(harga, dp, tenor);
+          cekhargadp(harga, dp);
+        } 
+        if (e.originalEvent.srcElement.name == 'tenor') {
+          tenor = this.value;
+          $(' #tenor-bulan ').html(tenor);
+          kalkulasi(harga, dp, tenor);
+          // cekhargadp(harga, dp);
         }
       });
     });
   };
+  function cekhargadp(harga, dp) {
+    if (parseInt(dp) > parseInt(harga)) {
+      $(' #warning-alert ').css('display', 'block');
+    } else {
+      $(' #warning-alert ').css('display', 'none');
+    }
+  }
+  function kalkulasi(harga, dp, tenor) {
+    if (harga && dp && tenor) {
+      if (parseInt(dp) > parseInt(harga)) {
+        $(' #total-layout-responsive ').css('display', 'none');
+      } else {
+        $(' #total-layout-responsive ').css('display', 'block');
+      }
+      var cicilan = (harga - dp) / tenor;
+      $(' #angsuran-responsive ').html(rupiah(parseInt(cicilan)));
+      $(' #total-responsive ').html(rupiah(parseInt(harga)));
+      console.log('cicilan', cicilan);
+    }
+  }
 
   rangeSlider();
   function rupiah(bilangan) {	
