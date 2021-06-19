@@ -62,6 +62,36 @@
   .text-alfazza {
     margin-top: 30px !important;
   }
+  .investor-invitation-btn {
+    border: none;
+    background: #7cc576;
+    padding: 18px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 4px;
+  }
+  @media only screen and (min-width: 800px) {
+    #pernah_kredit {
+      width: 50%;
+    }
+  }
+  #pernah_kredit { 
+    width: 100%;
+    padding: 10px;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+  }
+  .faq-list > li {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+  }
+  .faq-apa-itu-alfazza > li {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
   
 
 </style>
@@ -212,7 +242,7 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
+    <section id="why-us" class="why-us" style="padding-bottom: 60px; text-align: center;">
       <div class="container-fluid">
 
         <div class="row">
@@ -221,31 +251,8 @@
 
             <div class="content" data-aos="fade-up">
               <h3>Penawaran menjadi <strong>Investor</strong></h3>
-              <p>
-                Saat ini Al fazza membuka penawaran untuk menjadi investor, kami membuka 2 skema investasi yaitu sebagai investor pasif dan investor kontrak
-              </p>
-            </div>
-
-            <div class="accordion-list">
-              <ul>
-                <li data-aos="fade-up" data-aos-delay="100">
-                  <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span>Investor Pasif<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-1" class="collapse" data-parent=".accordion-list">
-                    <p>
-                      Disini dijelaskan tentang investor pasif
-                    </p>
-                  </div>
-                </li>
-
-                <li data-aos="fade-up" data-aos-delay="200">
-                  <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span>Investor Kontrak<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
-                    <p>
-                      Disini dijelaskan tentang investor Kontrak
-                    </p>
-                  </div>
-                </li>
-              </ul>
+              <p>Saat ini Al fazza membuka penawaran untuk menjadi investor</p>
+              <button class="investor-invitation-btn" onclick="investorButtonClick()">Saya Tertarik Jadi Investor</button>
             </div>
 
           </div>
@@ -406,28 +413,35 @@
         <ul class="faq-list">
 
           <li data-aos="fade-up">
-            <a data-toggle="collapse" class="collapsed" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">Apa itu Al-Fazza ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
             <div id="faq1" class="collapse" data-parent=".faq-list">
               <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                Al Fazza adalah perusahaan perkreditan Syariah yang berbasis di kota makassar, dalam pelaksanaan kegiatan operasionalnya Al fazza murni 100% menggunakan modal sendiri atau modal dari para anggota dan investor. Skema yang kami terapkan dalam proses perkreditan ini sesuai dengan syariat islam yaitu :
               </p>
+              <ul class="faq-apa-itu-alfazza">
+                <li>Akad murni jual beli </li>
+                <li>Tanpa bunga</li>
+                <li>Tanpa denda</li>
+                <li>Tanpa sita</li>
+                <li>Serta jelas serah terima barangnya</li>
+              </ul>
             </div>
           </li>
 
           <li data-aos="fade-up" data-aos-delay="100">
-            <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">Siapa Pendiri Al-Fazza ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
             <div id="faq2" class="collapse" data-parent=".faq-list">
               <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                Al-Fazza didirikan oleh Sardi pada 20 Desember 2017 dan saat ini menjabat sebagai CEO Al-Fazza
               </p>
             </div>
           </li>
 
           <li data-aos="fade-up" data-aos-delay="200">
-            <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">Apakah Al-Fazza semacam lembaga atau perusahaan pembiayaan ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
             <div id="faq3" class="collapse" data-parent=".faq-list">
               <p>
-                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                <b>Tidak</b>, kami bukan perusahaan atau lembaga pembiayaan. Akan tetapi kami adalah usaha dagang dalam bidang jual beli barang elektronik dan furniture yang menyediakan fasilitas pembayaran secara kredit yang sesuai dengan ketentuan hukum syariah
               </p>
             </div>
           </li>
@@ -436,26 +450,65 @@
             <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
             <div id="faq4" class="collapse" data-parent=".faq-list">
               <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                Skema kredit yang kami terapkan yaitu:
               </p>
+              <ul class="faq-apa-itu-alfazza">
+                <li>Akad murni jual beli </li>
+                <li>Tanpa bunga</li>
+                <li>Tanpa denda</li>
+                <li>Tanpa sita</li>
+                <li>Serta jelas serah terima barangnya</li>
+              </ul>
             </div>
           </li>
 
           <li data-aos="fade-up" data-aos-delay="400">
-            <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <a data-toggle="collapse" href="#faq5" class="collapsed">Apa saja yang membedakan Al-Fazza dengan lembaga keuangan konvensional/Syariah lainya ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
             <div id="faq5" class="collapse" data-parent=".faq-list">
+              <ul class="faq-apa-itu-alfazza">
+                <li>Murni Akad jual beli dimana Al-Fazza sepenuhnya memiliki barang tersebut kemudian menjual kepada customer</li>
+                <li>Tidak menerapkan  adanya denda ataupun penalti atas keterlambatan pembayaran</li>
+                <li>Tanpa Sita, dalam proses penyelesaian masalahnya tidak menerapkan system penyitaan barang menunggak melainkan masalah tersebut diselesaikan dengan barang menunggak tersebut secara bersama-sama menjual barang tersebut ke pihak lain, kemudian masing-masing pihak mengambil hak sesuai dengan yang tertera pada lembar akad sebelumnya</li>
+                <li>Tanpa bunga, tidak ada biaya-biaya yang muncul selain dari biaya yang telah disepakati di awal dan dituangkan dalam berkas akad.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="500">
+            <a data-toggle="collapse" href="#faq6" class="collapsed">Bagaimana alur pengajuan kredit di Al-Fazza dari awal hingga selesai ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq6" class="collapse" data-parent=".faq-list">
+              
+              <ul class="faq-apa-itu-alfazza">
+                <li><b>Pengajuan</b><div>Pemohon melakukan pengajuan kredit dan melengkapi data yang dipersyaratkan.</div></li>
+                <li><b>Analisa Pengajuan</b><div>Data pengajuan pemohon akan ditampung dan di analisa oleh tim</div></li>
+                <li><b>Proses Survey</b><div>Tim akan melakukan proses survey di rumah atau di tempat usaha pemohon</div></li>
+                <li><b>Analisa Kredit</b><div>Tim akan melakukan proses analisa hasil survey untuk menentukan apakah customer tersebut pengajuannya diterima atau tidak</div></li>
+                <li><b>Penawaran Kredit</b><div>Admin akan mengirimkan penawaran harga kredit kepada pemohon, meliputi jumlah DP,Angsuran dan Jangka waktu angsuran (Tenor)</div></li>
+                <li><b>Proses Akad</b><div>Tim akan melaksanakan proses akad jual beli dan serah terima barang dengan customer.</div></li>
+              </ul>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="500">
+            <a data-toggle="collapse" href="#faq7" class="collapsed">Bagaimana teknis serah terima barang melalui skema kredit syariah ini ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq7" class="collapse" data-parent=".faq-list">
               <p>
-                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                Tim akan melakukan proses pembelian barang lalu melakukan proses penjualan dengan customer dengan cara penyerahan barang  secara langsung dan menerima DP sebagai tanda pembayaran awal. 
               </p>
             </div>
           </li>
 
           <li data-aos="fade-up" data-aos-delay="500">
-            <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq6" class="collapse" data-parent=".faq-list">
-              <p>
-                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-              </p>
+            <a data-toggle="collapse" href="#faq8" class="collapsed">Apakah bisa kami meminjam dana/gadai di sini ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq8" class="collapse" data-parent=".faq-list">
+              <b>TIDAK BISA</b>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="500">
+            <a data-toggle="collapse" href="#faq9" class="collapsed">Apakah bisa melakukan take over atau memindahkan kredit ke orang lain ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq9" class="collapse" data-parent=".faq-list">
+              <b>TIDAK BISA</b>
             </div>
           </li>
 
@@ -636,6 +689,15 @@
 
                 var data = `
                   https://wa.me/6282291515426?text=Permisi%20Saya%20Ingin%20melakukan%20Pengajuan%20Kredit%20di%20Alfazza.%20Berikut%20Data%20saya%0A1.%20Nama%20lengkap%20%3A%20${name}%0A%0A2.%20Alamat%20lengkap%20%3A%20${alamat_rumah}%20%0A%0A3.%20Umur%20%3A%20${usia}%20%0A%0A4.%20Pekerjaan%20%3A%20${pekerjaan}%0A%0A5.%20Penghasilan%20%3A%20${penghasilan}%20%0A%0A6.%20Nama%20perusahaan%20tempat%20bekerja%3A%20${nama_perusahaan}%20%0A%0A7.%20Alamat%20perusahaan%20tempat%20bekerja%3A%20${alamat_perusahaan}%20%0A%0A8.%20No%20hp%3A%20${no_hp}%20%0A%0A9.%20Apakah%20ada%20kredit%20di%20tempat%20lain%3F${pernah_kredit}%0A%0A10.%20Rencana%20barang%20yang%20akan%20di%20kredit%3A%20${rencana_barang}%20%0A%0A11.%20Merek%20dan%20type%20apa%3A%20${merk_barang}%20%0A%0A12.%20Tau%20Alfazza%20dari%20mana.%3F%20%3A%20${tau_alfazza}%0A%0A13.%20Alasan%20mau%20megajukan%20kredit%20di%20alfazza.%3F%20%3A%20${alasan_kredit}
+                `;
+                window.open(data,"_blank");
+              }
+
+              var inginJadiInvestor = 'Permisi pak, sy dapat info dari web, terkait program investor pak';
+
+              function investorButtonClick() {
+                var data = `
+                  https://wa.me/6282291515426?text=${encodeURI(inginJadiInvestor)}
                 `;
                 window.open(data,"_blank");
               }
