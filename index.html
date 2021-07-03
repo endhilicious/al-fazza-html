@@ -76,6 +76,17 @@
       width: 50%;
     }
   }
+  @media only screen and (max-width: 800px) {
+    #why-us {
+      height: 600px;
+    }
+    #why-us div.image {
+      margin: 0 15px;
+    }
+    #services div.image {
+      margin: 0 15px;
+    }
+  }
   #pernah_kredit { 
     width: 100%;
     padding: 10px;
@@ -98,6 +109,87 @@
   }
   
 
+</style>
+
+<style>
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
 </style>
 
 <body>
@@ -149,17 +241,18 @@
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-right">
-            <div class="image">
-              <img src="assets/img/photo_2021-04-10_15-00-40.jpg" class="img-fluid" alt="">
-            </div>
+            <img src="assets/img/photo_2021-04-10_15-00-40.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6" data-aos="fade-left">
             <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 ">
-              <h4>Al Fazza adalah perusahaan perkreditan Syariah yang berbasis di kota makassar, dalam pelaksanaan kegiatan operasionalnya Al fazza murni 100% menggunakan modal sendiri atau modal dari para anggota dan investor. </h4>
-              <p class="font-italic">
+              <h4 style="    font-size: 15px;
+              font-weight: 300;
+              line-height: revert;
+              text-align: justify;">Al Fazza adalah perusahaan perkreditan Syariah yang berbasis di kota makassar, dalam pelaksanaan kegiatan operasionalnya Al fazza murni 100% menggunakan modal sendiri atau modal dari para anggota dan investor. </h4>
+              <p class="" style="font-weight: 300">
                 Skema yang kami terapkan dalam proses perkreditan ini sesuai dengan syariat islam yaitu :
               </p>
-              <ul>
+              <ul style="font-weight: 300;">
                 <li><i class="bx bx-check-double"></i>Akad murni jual beli </li>
                 <li><i class="bx bx-check-double"></i>Tanpa bunga</li>
                 <li><i class="bx bx-check-double"></i>Tanpa denda</li>
@@ -183,13 +276,13 @@
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-left">
-            <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 ">
+            <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 " style="line-height: 2.1;">
               <h4>Visi</h4>
-              <p class="font-italic">
+              <p class="">
                 Menjadi solusi bagi ummat dan menjadi pilihan utama dalam proses kredit barang secara Syariah khususnya di kota makassar dan sekitarnya.
               </p>
               <h4>Misi</h4>
-              <ol>
+              <ol style="padding-left: 25px;">
                 <li>Membagun perusahaan yang sehat dengan sistem kekeluargaan yang berlandaskan syariat islam</li>
                 <li>Komitmen untuk menjalankan proses bisnis sesuai dengan syariat</li>
                 <li>Memenuhi kebutuhan ummat dengan memberikan pelayanan terbaik</li>
@@ -207,6 +300,10 @@
       </div>
     </section><!-- End About Us Section -->
 
+    <!-- ======= GALLERY Section ======= -->
+    <!-- ======= END GALLERY Section ======= -->
+
+
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
@@ -222,12 +319,12 @@
             <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up">
               <i class="bx bx-receipt"></i>
               <h4>Domisili Makassar dan sekitarnya</h4>
-              <p>Penjelasannya disini</p>
+              <p>-</p>
             </div>
             <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="100">
               <i class="bx bx-cube-alt"></i>
-              <h4>Fotocopy KTP</h4>
-              <p>Penjelasannya disini</p>
+              <h4>Fotocopy KTP Pemohon dan Penjamin</h4>
+              <p>-</p>
             </div>
             <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="200">
               <i class="bx bx-images"></i>
@@ -247,18 +344,15 @@
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us" style="padding-bottom: 60px; text-align: center;">
-      <div class="container-fluid">
-
-        
-        <div class="row">
-          <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/services.jpg");' data-aos="fade-left" data-aos-delay="100"></div>
-          <div class="col-lg-6 order-2 order-lg-1">
+      <div class="container">
+        <div class="row" style="height: 400px;">
+          <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/tertarik-investor.jpg");background-repeat: round;height: inherit;' data-aos="fade-left" data-aos-delay="100"></div>
+          <div class="col-lg-6 order-2 order-lg-1" style="display: flex;flex-direction: column;justify-content: center;">
             <h3>Penawaran menjadi <strong>Investor</strong></h3>
             <p>Saat ini Al fazza membuka penawaran untuk menjadi investor</p>
-            <button class="investor-invitation-btn" onclick="investorButtonClick()">Saya Tertarik Jadi Investor</button>
+            <button class="investor-invitation-btn" onclick="investorButtonClick()" style="width: 50%;place-self: center;">Saya Tertarik Jadi Investor</button>
           </div>
         </div>
-
       </div>
     </section>
     <!-- End Why Us Section -->
@@ -452,22 +546,6 @@
             </div>
           </li>
 
-          <li data-aos="fade-up" data-aos-delay="300">
-            <a data-toggle="collapse" href="#faq4" class="collapsed">Bagaimana skema pengajuan kredit di Al-Fazza ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq4" class="collapse" data-parent=".faq-list">
-              <p>
-                Skema kredit yang kami terapkan yaitu:
-              </p>
-              <ul class="faq-apa-itu-alfazza">
-                <li>Akad murni jual beli </li>
-                <li>Tanpa bunga</li>
-                <li>Tanpa denda</li>
-                <li>Tanpa sita</li>
-                <li>Serta jelas serah terima barangnya</li>
-              </ul>
-            </div>
-          </li>
-
           <li data-aos="fade-up" data-aos-delay="400">
             <a data-toggle="collapse" href="#faq5" class="collapsed">Apa saja yang membedakan Al-Fazza dengan lembaga keuangan konvensional/Syariah lainya ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
             <div id="faq5" class="collapse" data-parent=".faq-list">
@@ -505,19 +583,37 @@
           </li>
 
           <li data-aos="fade-up" data-aos-delay="500">
-            <a data-toggle="collapse" href="#faq8" class="collapsed">Apakah bisa kami meminjam dana/gadai di sini ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq8" class="collapse" data-parent=".faq-list">
-              <b>TIDAK BISA</b>
+            <a data-toggle="collapse" href="#faq9" class="collapsed">Apa saja yang dapat dikredit di Al-Fazza ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq9" class="collapse" data-parent=".faq-list">
+              <div>HP, Barang elektronik, Furniture, dan Perlengkapan usaha.</div>
+            </div>
+          </li>
+          
+          <li data-aos="fade-up" data-aos-delay="500">
+            <a data-toggle="collapse" href="#faq11" class="collapsed">Bagaimana alur pengajuan kredit di Al-Fazza dari awal hingga selesai ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq11" class="collapse" data-parent=".faq-list">
+              <ul class="faq-apa-itu-alfazza">
+                <li>Fotocopy KTP &#38; KK</li>
+                <li>Fotocopy ID Card Perusahaan &#38; Slip Gaji</li>
+                <li>Fotocopy KTP Penjamin </li>
+                <li>Fotocopy Rekening Listrik</li>
+              </ul>
             </div>
           </li>
 
           <li data-aos="fade-up" data-aos-delay="500">
-            <a data-toggle="collapse" href="#faq9" class="collapsed">Apakah bisa melakukan take over atau memindahkan kredit ke orang lain ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq9" class="collapse" data-parent=".faq-list">
-              <b>TIDAK BISA</b>
+            <a data-toggle="collapse" href="#faq12" class="collapsed">Apa saja yang dapat dikredit di Al-Fazza ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq12" class="collapse" data-parent=".faq-list">
+              <b>Tidak ada</b>
             </div>
           </li>
 
+          <li data-aos="fade-up" data-aos-delay="500">
+            <a data-toggle="collapse" href="#faq13" class="collapsed">Dimana kantor Alfazza ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq13" class="collapse" data-parent=".faq-list">
+              <div>Kantor Alfazza ada di Perumahan Pemprov Bukit Graha Praja Blok C14 no. 3 Kec. Manggala Antang, Makassar.</div>
+            </div>
+          </li>
         </ul>
 
       </div>
@@ -536,6 +632,26 @@
 
           <div class="col-lg-4">
             <div class="info d-flex flex-column" data-aos="fade-right">
+                <div style="color: red">
+                  <span>simulasi dibawah khusus untuk barang elektronik dan furniture</span>
+                  <br />
+                  <div class="portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                      <div class="portfolio-info">
+                        <div class="portfolio-links">
+                          <span>untuk handphone bisa dilihat <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1">disini</a></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- The Modal -->
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                  </div>
+
+                </div>
                 <div class="range-slider">
                   <h4 class="great" style="padding: 0 !important">Harga Barang</h4>
                   <input name="harga"class="range-slider__range" type="range" value="0" min="0" max="15000000" step="10000">
@@ -680,19 +796,6 @@
                 const tau_alfazza = document.getElementById('tau_alfazza').value;
                 const alasan_kredit = document.getElementById('alasan_kredit').value;
 
-                // console.log('name', name);
-                // console.log('usia', usia);
-                // console.log('pekerjaan', pekerjaan);
-                // console.log('penghasilan', penghasilan);
-                // console.log('no_hp', no_hp);
-                // console.log('nama_perusahaan', nama_perusahaan);
-                // console.log('alamat_rumah', alamat_rumah);
-                // console.log('alamat_perusahaan', alamat_perusahaan);
-                // console.log('rencana_barang', rencana_barang);
-                // console.log('merk_barang', merk_barang);
-                // console.log('tau_alfazza', tau_alfazza);
-                // console.log('alasan_kredit', alasan_kredit);
-
                 var data = `
                   https://wa.me/6282291515426?text=Permisi%20Saya%20Ingin%20melakukan%20Pengajuan%20Kredit%20di%20Alfazza.%20Berikut%20Data%20saya%0A1.%20Nama%20lengkap%20%3A%20${name}%0A%0A2.%20Alamat%20lengkap%20%3A%20${alamat_rumah}%20%0A%0A3.%20Umur%20%3A%20${usia}%20%0A%0A4.%20Pekerjaan%20%3A%20${pekerjaan}%0A%0A5.%20Penghasilan%20%3A%20${penghasilan}%20%0A%0A6.%20Nama%20perusahaan%20tempat%20bekerja%3A%20${nama_perusahaan}%20%0A%0A7.%20Alamat%20perusahaan%20tempat%20bekerja%3A%20${alamat_perusahaan}%20%0A%0A8.%20No%20hp%3A%20${no_hp}%20%0A%0A9.%20Apakah%20ada%20kredit%20di%20tempat%20lain%3F${pernah_kredit}%0A%0A10.%20Rencana%20barang%20yang%20akan%20di%20kredit%3A%20${rencana_barang}%20%0A%0A11.%20Merek%20dan%20type%20apa%3A%20${merk_barang}%20%0A%0A12.%20Tau%20Alfazza%20dari%20mana.%3F%20%3A%20${tau_alfazza}%0A%0A13.%20Alasan%20mau%20megajukan%20kredit%20di%20alfazza.%3F%20%3A%20${alasan_kredit}
                 `;
@@ -739,6 +842,7 @@
         <div class="social-links">
           <a target="_blank" href="https://web.facebook.com/alfazza.k.makassar" class="facebook"><i class="bx bxl-facebook"></i></a>
           <a target="_blank" href="https://www.instagram.com/alfazzastore.mks/" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a target="_blank" href="https://maps.app.goo.gl/nzEiesacW4BUG1FB8" class="maps"><i class="icofont-google-map"></i></a>
         </div>
 
       </div>
@@ -746,8 +850,25 @@
 
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-  <a href="#" class=""><i class="icofont-simple-up"></i></a>
+  
+  <!-- GetButton.io widget -->
+  <script type="text/javascript">
+    (function () {
+    var options = {
+    whatsapp: "+6282291515426", // WhatsApp number
+    call_to_action: "contact us", // Call to action
+    position: "right", // Position may be 'right' or 'left'
+    pre_filled_message: "halo", // WhatsApp pre-filled message
+    };
+    var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+    s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+    })();
+  </script>
+  <!-- /GetButton.io widget -->
+
   
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -789,6 +910,7 @@
         if (e.originalEvent.srcElement.name == 'harga') {
           harga = this.value;
           $(' #harga-rupiah ').html(rupiah(harga));
+          $(' #harga_barang_input ').value(harga);
           kalkulasi(harga, dp, tenor);
           cekhargadp(harga, dp);
         }
@@ -824,7 +946,6 @@
       var cicilan = (harga - dp) / tenor;
       $(' #angsuran-responsive ').html(rupiah(parseInt(cicilan)));
       $(' #total-responsive ').html(rupiah(parseInt(harga)));
-      console.log('cicilan', cicilan);
     }
   }
 
