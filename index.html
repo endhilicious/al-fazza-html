@@ -625,7 +625,6 @@
 
         <div class="section-title">
           <h2>Simulasi</h2>
-          <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga eum quidem</p>
         </div>
 
         <div class="row" style="margin-bottom: 3rem;">
@@ -635,6 +634,7 @@
                 <div style="color: red">
                   <span>simulasi dibawah khusus untuk barang elektronik dan furniture</span>
                   <br />
+                  <!-- 
                   <div class="portfolio-item filter-card">
                     <div class="portfolio-wrap">
                       <div class="portfolio-info">
@@ -644,6 +644,7 @@
                       </div>
                     </div>
                   </div>
+                  -->
                   <!-- The Modal -->
                   <div id="myModal" class="modal">
                     <span class="close">&times;</span>
@@ -666,7 +667,7 @@
                 
                 <div class="range-slider">
                   <h4 class="great" style="padding: 0 !important">Tenor</h4>
-                  <input name="tenor"class="range-slider__range" type="range" value="1" min="1" max="10">
+                  <input name="tenor"class="range-slider__range" type="range" value="6" min="6" max="12">
                   <span class="range-slider__values" id="tenor-bulan">0</span> bulan
                 </div> 
                 <hr />
@@ -717,7 +718,7 @@
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <label for="no_hp">Nomor HP</label>
-                  <input type="text" class="form-control" name="no_hp" id="no_hp" placeholder="082291213xxx" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <input type="number" class="form-control" name="no_hp" id="no_hp" placeholder="082291213xxx" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
@@ -739,12 +740,12 @@
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <label for="alamat_rumah">Alamat Rumah</label>
-                  <textarea class="form-control" name="alamat_rumah" id="alamat_rumah" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Jln. Konoha Takalia"></textarea>
+                  <textarea class="form-control" name="alamat_rumah" id="alamat_rumah" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Masukkan alamat (lebih lengkap lebih bagus)"></textarea>
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
                   <label for="alamat_perusahaan">Alamat perusahaan tempat bekerja</label>
-                  <textarea class="form-control" name="alamat_perusahaan" id="alamat_perusahaan" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Jln. Konoha Takalia"></textarea>
+                  <textarea class="form-control" name="alamat_perusahaan" id="alamat_perusahaan" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Masukkan alamat (lebih lengkap lebih bagus)"></textarea>
                   <div class="validate"></div>
                 </div>
               </div>
@@ -756,7 +757,7 @@
                 </div>
                 <div class="col-md-6 form-group">
                   <label for="merk_barang">Merek dan type apa</label>
-                  <input type="text" class="form-control" name="merk_barang" id="merk_barang" placeholder="Iphone 20 Serial Terbaru" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <input type="text" class="form-control" name="merk_barang" id="merk_barang" placeholder="Masukkan merk / tipe barang" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                   <div class="validate"></div>
                 </div>
               </div>
@@ -843,31 +844,13 @@
           <a target="_blank" href="https://web.facebook.com/alfazza.k.makassar" class="facebook"><i class="bx bxl-facebook"></i></a>
           <a target="_blank" href="https://www.instagram.com/alfazzastore.mks/" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a target="_blank" href="https://maps.app.goo.gl/nzEiesacW4BUG1FB8" class="maps"><i class="icofont-google-map"></i></a>
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=6282291515426" class="wa"><i class="bx bxl-whatsapp"></i></a>
         </div>
 
       </div>
     </div>
 
   </footer><!-- End Footer -->
-
-  
-  <!-- GetButton.io widget -->
-  <script type="text/javascript">
-    (function () {
-    var options = {
-    whatsapp: "+6282291515426", // WhatsApp number
-    call_to_action: "contact us", // Call to action
-    position: "right", // Position may be 'right' or 'left'
-    pre_filled_message: "halo", // WhatsApp pre-filled message
-    };
-    var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-    s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-    var x = document.getElementsByTagName('script')[0];
-    x.parentNode.insertBefore(s, x);
-    })();
-  </script>
-  <!-- /GetButton.io widget -->
 
   
   <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -943,7 +926,18 @@
       } else {
         $(' #total-layout-responsive ').css('display', 'block');
       }
-      var cicilan = (harga - dp) / tenor;
+      console.log(typeof tenor);
+      var persentase = 1;
+      if (parseInt(tenor) <= 6) {
+        persentase = 1.25;
+      } else if (parseInt(tenor) <= 8) {
+        persentase = 1.3;
+      } else if (parseInt(tenor) <= 10) {
+        persentase = 1.35;
+      } else {
+        persentase = 1.4;
+      }
+      var cicilan = (((harga - dp) + 100000) * persentase) / tenor;
       $(' #angsuran-responsive ').html(rupiah(parseInt(cicilan)));
       $(' #total-responsive ').html(rupiah(parseInt(harga)));
     }
@@ -970,7 +964,7 @@
   whatsapp: "+6282291515426", // WhatsApp number
   call_to_action: "contact us", // Call to action
   position: "right", // Position may be 'right' or 'left'
-  pre_filled_message: "halo", // WhatsApp pre-filled message
+  pre_filled_message: "Permisi pak, sy dapat info dari web, terkait program investor pak", // WhatsApp pre-filled message
   };
   var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
   var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
